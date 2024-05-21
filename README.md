@@ -1,2 +1,7 @@
-# dotfiles
-🗃️ my Thinkpad X220 (Arch Linux + bspwm) configs and setup guide | Arch Linux + bspwm 配置和安装攻略
+# 🗃️ dotfiles
+
+The configuration files for my Arch Linux laptop.
+
+## Screenshots
+
+![image](/public/screenshot.jpg)
