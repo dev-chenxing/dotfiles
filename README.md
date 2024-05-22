@@ -66,7 +66,68 @@ And we are good to go!
 
 **INSTALL!**
 
-Then, select `no` when asked whether to chroot into the installation.
+Then, select `yes` when asked whether to chroot into the installation.
+
+Now we need to do the basic configuration for bspwm, or else you will be getting a black screen upon logging in.
+
+```bash
+su - <"username"> # login into your user
+cd $HOME/.config # go to the .config folder
+mkdir bspwm sxhkd polybar picom dunst
+```
+
+![chenxing@archiso](/screenshots/chenxing@archiso.png)
+
+Now copy the configuration files from the examples.
+
+```bash
+cp /usr/share/doc/bspwm/examples/bspwmrc bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc sxhkd/
+cp /etc/xdg/picom.conf picom/
+cp /etc/polybar/config.ini polybar/
+cp /etc/dunst/dunstrc dunst/
+```
+
+Next, we will make some changes to these configuration files. 
+
+First, add the auto start applications to `bspwm/bspwmrc`
+
+```bash
+nano bspwm/bspwmrc
+```
+
+```
+# auto start applications
+nitrogen --restore &
+polybar &
+picom --config $HOME/.config/picom/picom.conf &
+dunst &
+```
+
+`Ctrl-S` to save, `Ctrl-X` to exit.
+
+Next, edit keybindings
+
+```bash
+nano sxhkd
+```
+
+First, change the `terminal emulator` to `alacritty`
+```
+# terminal emulator
+super + Return
+    alacritty
+```
+
+Change the `program launcher` to `rofi` and rebind it to `super + d`
+
+```
+# program launcher
+super + d
+    rofi
+```
+
+And we will leave the rest as it for now.
 
 **REBOOT** and `Boot existing OS` this time.
 
@@ -74,4 +135,4 @@ If you follow the instructions above, right now you should be greeted by the def
 
 ![sddm](/screenshots/sddm.png)
 
-Login your user account that you just added. 
+Login your user account that you just added with Passphrase. 
