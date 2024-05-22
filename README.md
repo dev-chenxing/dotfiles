@@ -129,6 +129,8 @@ super + d
 
 And we will leave the rest as it for now.
 
+![sxhkdrc](/screenshots/sxhkdrc.png)
+
 **REBOOT** and `Boot existing OS` this time.
 
 If you follow the instructions above, right now you should be greeted by the default `sddm` display manager.
