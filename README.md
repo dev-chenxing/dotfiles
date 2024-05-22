@@ -131,10 +131,25 @@ And we will leave the rest as it for now.
 
 ![sxhkdrc](/screenshots/sxhkdrc.png)
 
+Now exit from chroot and our installation is completed.
+
+```bash
+exit # logout from [username@archiso ~]$
+exit # exit from [username@archiso /]$
+exit # exit from [root@archiso /]#
+```
+
 **REBOOT** and `Boot existing OS` this time.
+
+```bash
+reboot
+```
 
 If you follow the instructions above, right now you should be greeted by the default `sddm` display manager.
 
 ![sddm](/screenshots/sddm.png)
 
-Login your user account that you just added with Passphrase. 
+Once you have successfully logged in to your user account, your desktop should look like what's below
+
+![bspwm](/screenshots/bspwm.png)
+
