@@ -68,4 +68,4 @@ And we are good to go!
 
 Then, select `no` when asked whether to chroot into the installation.
 
-**REBOOT** and `Boot Existing OS` this time.
+**REBOOT** and `Boot existing OS` this time.
