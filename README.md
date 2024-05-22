@@ -54,7 +54,7 @@ archinstall
 - Leave the Disk encryption as empty.
 - Use `Grub` for the bootloader.
 - Specify your Hostname: `arch`
-- Add your user account, and `yes`, it should be a superuser. Confirm and exit.
+- Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 - For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter. 
 - Choose `Pulseaudio` for audio server.
 - Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf`
@@ -69,3 +69,9 @@ And we are good to go!
 Then, select `no` when asked whether to chroot into the installation.
 
 **REBOOT** and `Boot existing OS` this time.
+
+If you follow the instructions above, right now you should be greeted by the default `sddm` display manager.
+
+![sddm](/screenshots/sddm.png)
+
+Login your user account that you just added. 
