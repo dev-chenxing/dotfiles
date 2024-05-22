@@ -48,21 +48,21 @@ archinstall
 
 ![archinstall](/screenshots/archinstall.png)
 
-- Set your Mirror Region to where you are.
-- Keep the Locales as it (us, en_US, UTF-8).
-- Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
-- Leave the Disk encryption as empty.
-- Use `Grub` for the bootloader.
-- Specify your Hostname: `arch`
-- Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
-- For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter. 
-- Choose `Pulseaudio` for audio server.
-- Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf`
-- Then, `Copy ISO network configuration to installation`.
-- Set your timezone.
-- Enable `multilib` as an optional additional repositories.
+-   Set your Mirror Region to where you are.
+-   Keep the Locales as it (us, en_US, UTF-8).
+-   Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
+-   Leave the Disk encryption as empty.
+-   Use `Grub` for the bootloader.
+-   Specify your Hostname: `arch`
+-   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
+-   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
+-   Choose `Pulseaudio` for audio server.
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf`
+-   Then, `Copy ISO network configuration to installation`.
+-   Set your timezone.
+-   Enable `multilib` as an optional additional repositories.
 
-And we are good to go! 
+And we are good to go!
 
 **INSTALL!**
 
@@ -88,7 +88,7 @@ cp /etc/polybar/config.ini polybar/
 cp /etc/dunst/dunstrc dunst/
 ```
 
-Next, we will make some changes to these configuration files. 
+Next, we will make some changes to these configuration files.
 
 First, add the auto start applications to `bspwm/bspwmrc`
 
@@ -113,6 +113,7 @@ nano sxhkd
 ```
 
 First, change the `terminal emulator` to `alacritty`
+
 ```
 # terminal emulator
 super + Return
@@ -124,7 +125,7 @@ Change the `program launcher` to `rofi` and rebind it to `super + d`
 ```
 # program launcher
 super + d
-    rofi
+    rofi -show drun
 ```
 
 And we will leave the rest as it for now.
@@ -153,3 +154,62 @@ Once you have successfully logged in to your user account, your desktop should l
 
 ![bspwm](/screenshots/bspwm.png)
 
+`Win + Enter` to bring up the terminal.
+
+### How to Setup Chinese Input Method
+
+> Written on May 23rd, 2024
+
+We are going to use `fcitx5` for our input method and `Noto Sans Mono CJK` for our font
+
+```bash
+sudo pacman -Sy fcitx5-im
+sudo pacman -Sy fcitx5-chinese-addons
+sudo pacman -S noto-fonts-cjk
+```
+
+Set the IM modules environment variables and reboot
+
+```bash
+sudo nano /etc/environment
+```
+
+```
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+```
+
+![etc_environment](/screenshots/etc_environment.png)
+
+`Win + D` to launch Rofi and run the _Fcitx 5 Configuration_. Click on the `Run Fcitx 5` button.
+
+On the right panel, search input method `Pinyin` and double click on it to set it as Current Input Method.
+
+Then go to the `Global Options` section, remove the `Enumerate Input Method Group Forward/Backward` keybinds and change the `Trigger Input Method` keybind to `Super+Space`.
+
+Apply the changes and go back to the `Input Method` section. Select `Pinyin` and click on the `Configure` button.
+
+-   Enable Cloud Pinyin
+-   Configure Cloud Pinyin:
+    -   Minimum Pinyin Length: 2
+    -   Backend: Baidu
+-   Previous Candidate: Left
+-   Next Candidate: Right
+
+![fcitx5](/screenshots/fcitx5.png)
+
+One last step to set is to add fcitx5 to the list of auto start applications
+
+```bash
+nano .config/bspwm/bspwmrc
+```
+
+```
+# auto start applications
+nitrogen --restore &
+polybar &
+picom --config $HOME/.config/picom/picom.conf &
+dunst &
+fcitx5 -d &
+```
