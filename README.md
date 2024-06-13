@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf thunar git code`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
@@ -80,7 +80,7 @@ Then, clone this repository to `$HOME`
 git clone https://github.com/dev-chenxing/dotfiles.git
 ```
 
-First, run the `install-paru` script to install [paru](https://aur.archlinux.org/packages/paru)
+First, run the `install-paru` script to install [paru](https://aur.archlinux.org/packages/paru), the AUR helper
 
 ```bash
 cd dotfiles
