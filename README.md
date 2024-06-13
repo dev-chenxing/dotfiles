@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen kitty lf git`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf thunar git`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
@@ -112,12 +112,12 @@ Next, edit keybindings
 nano sxhkd/sxhkdrc
 ```
 
-First, change the `terminal emulator` to `kitty`
+First, change the `terminal emulator` to `alacritty`
 
 ```
 # terminal emulator
 super + Return
-    kitty
+    alacritty
 ```
 
 Change the `program launcher` to `rofi` and rebind it to `super + d`

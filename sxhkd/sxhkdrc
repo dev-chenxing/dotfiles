@@ -4,11 +4,39 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	alacritty
 
 # program launcher
-super + @space
-	dmenu_run
+super + d
+	rofi -show drun
+
+# file manager
+super + e
+	thunar
+
+# decrease brightness
+super + i
+	brightnessctl set 3%-
+
+# increase brightness
+super + o
+	brightnessctl set +3%
+
+# lock screen
+super + x
+	slock
+
+# screenshot
+Print
+  scrot '%F_%H-%M-%S.png' -e 'mv $f ~/Pictures/screenshot/' && notify-send 'Screenshot captured'
+
+# Increase volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+
+# Decrease volume
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -119,3 +147,11 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# switch to the previous/next desktop
+super + ctrl + {Left,Right}
+	bspc desktop --focus {prev,next}
+
+# move the window to the previous/next desktop
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} -f
