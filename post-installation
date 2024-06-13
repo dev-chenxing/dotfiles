@@ -1,6 +1,6 @@
 mkdir $HOME/.config/{bspwm,sxhkd,polybar,picom,dunst}
-cp bspwm $HOME/.config
-cp sxhkd $HOME/.config
-cp picom $HOME/.config
-cp polybar $HOME/.config
-cp dunst $HOME/.config
+cp -r bspwm $HOME/.config
+cp -r sxhkd $HOME/.config
+cp -r picom $HOME/.config
+cp -r polybar $HOME/.config
+cp -r dunst $HOME/.config
