@@ -74,7 +74,7 @@ Now we need to do the basic configuration for bspwm, or else you will be getting
 su - <"username"> # login into your user
 ```
 
-Then, clone this repository to `HOME`
+Then, clone this repository to `$HOME`
 
 ```bash
 git clone https://github.com/dev-chenxing/dotfiles.git
@@ -88,51 +88,7 @@ chmod +x ./post-installation
 ./post-installation
 ```
 
-This will initialize the configuration files for `bspwm`, `sxhkd`, `picom`, `polybar`, and `dunst`
-
-Next, we will make some changes to these configuration files.
-
-First, add the auto start applications to `bspwm/bspwmrc`
-
-```bash
-nano bspwm/bspwmrc
-```
-
-```
-# auto start applications
-nitrogen --restore &
-polybar &
-picom --config $HOME/.config/picom/picom.conf &
-dunst &
-```
-
-`Ctrl-S` to save, `Ctrl-X` to exit.
-
-Next, edit keybindings
-
-```bash
-nano sxhkd/sxhkdrc
-```
-
-First, change the `terminal emulator` to `alacritty`
-
-```
-# terminal emulator
-super + Return
-    alacritty
-```
-
-Change the `program launcher` to `rofi` and rebind it to `super + d`
-
-```
-# program launcher
-super + d
-    rofi -show drun
-```
-
-And we will leave the rest as it for now.
-
-![sxhkdrc](/screenshots/sxhkdrc.png)
+This will create the configuration files for `bspwm`, `sxhkd`, `picom`, `polybar`, and `dunst`
 
 Now exit from chroot and our installation is completed.
 
