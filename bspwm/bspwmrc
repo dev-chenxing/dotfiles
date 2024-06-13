@@ -18,7 +18,7 @@ bspc config gapless_monocle      true
 
 # auto start applications
 nitrogen --restore &
-polybar laptop-screen &
+polybar primary &
 picom --config $HOME/.config/picom/picom.conf &
 dunst &
 fcitx5 -d &
