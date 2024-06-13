@@ -196,4 +196,9 @@ zh_TW.UTF-8 UTF-8
 ### Install VSCode
 
 - To install the open source version: `pacman -S code`
-- 
+- To install the official version: `paru -S visual-studio-code-bin`
+
+### Set Wallpaper with Nitrogen
+
+- Launch nitrogen
+- `Preferences` -> `Add`
