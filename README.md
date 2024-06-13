@@ -72,21 +72,23 @@ Now we need to do the basic configuration for bspwm, or else you will be getting
 
 ```bash
 su - <"username"> # login into your user
-cd $HOME/.config # go to the .config folder
-mkdir bspwm sxhkd polybar picom dunst
 ```
 
-![chenxing@archiso](/screenshots/chenxing@archiso.png)
-
-Now copy the configuration files from the examples.
+Then, clone this repository to `HOME`
 
 ```bash
-cp /usr/share/doc/bspwm/examples/bspwmrc bspwm/
-cp /usr/share/doc/bspwm/examples/sxhkdrc sxhkd/
-cp /etc/xdg/picom.conf picom/
-cp /etc/polybar/config.ini polybar/
-cp /etc/dunst/dunstrc dunst/
+git clone https://github.com/dev-chenxing/dotfiles.git
 ```
+
+Run the `./post-installation` script
+
+```bash
+cd dotfiles`
+chmod +x ./post-installation
+./post-installation
+```
+
+This will initialize the configuration files for `bspwm`, `sxhkd`, `picom`, `polybar`, and `dunst`
 
 Next, we will make some changes to these configuration files.
 
