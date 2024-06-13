@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen alacritty lf`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen kitty lf git`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
@@ -109,15 +109,15 @@ dunst &
 Next, edit keybindings
 
 ```bash
-nano sxhkd
+nano sxhkd/sxhkdrc
 ```
 
-First, change the `terminal emulator` to `alacritty`
+First, change the `terminal emulator` to `kitty`
 
 ```
 # terminal emulator
 super + Return
-    alacritty
+    kitty
 ```
 
 Change the `program launcher` to `rofi` and rebind it to `super + d`
@@ -213,3 +213,22 @@ picom --config $HOME/.config/picom/picom.conf &
 dunst &
 fcitx5 -d &
 ```
+
+We also need to edit the locale file
+
+```bash
+sudo nano /etc/locale.gen`
+```
+
+Uncomment lines:
+
+```
+zh_CN.UTF-8 UTF-8
+zh_HK.UTF-8 UTF-8
+zh_TW.UTF-8 UTF-8
+```
+
+### Install VSCode
+
+- To install the open source version: `pacman -S code`
+- 
