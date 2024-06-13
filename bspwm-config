@@ -6,3 +6,6 @@ chmod +x $HOME/.config/sxhkd/sxhkdrc
 cp -r picom $HOME/.config
 cp -r dunst $HOME/.config
 cp -r polybar $HOME/.config
+
+sudo pacman -S noto-fonts noto-fonts-cjk -y
+yay -S ttf-symbola -y
