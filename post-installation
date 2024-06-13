@@ -1,7 +1,6 @@
-cd $HOME/.config # go to the .config folder
-mkdir bspwm sxhkd polybar picom dunst
-cp /usr/share/doc/bspwm/examples/bspwmrc bspwm/
-cp /usr/share/doc/bspwm/examples/sxhkdrc sxhkd/
-cp /etc/xdg/picom.conf picom/
-cp /etc/polybar/config.ini polybar/
-cp /etc/dunst/dunstrc dunst/
+mkdir $HOME/.config/{bspwm,sxhkd,polybar,picom,dunst}
+cp bspwm $HOME/.config
+cp sxhkd $HOME/.config
+cp picom $HOME/.config
+cp polybar $HOME/.config
+cp dunst $HOME/.config
