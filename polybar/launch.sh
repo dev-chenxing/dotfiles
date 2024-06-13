@@ -4,8 +4,8 @@ killall -q polybar
 
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-polybar laptop-screen &
+polybar primary &
 
 if [[ $(xrandr -q | grep 'DP-1 connected') ]]; then
-  polybar external-screen &
+  polybar secondary &
 fi
