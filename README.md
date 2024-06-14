@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
