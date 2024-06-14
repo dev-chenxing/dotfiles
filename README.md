@@ -201,4 +201,5 @@ zh_TW.UTF-8 UTF-8
 ### Set Wallpaper with Nitrogen
 
 - Launch nitrogen
-- `Preferences` -> `Add`
+- `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
+- Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
