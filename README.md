@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git  fcitx5`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
@@ -173,10 +173,14 @@ zh_TW.UTF-8 UTF-8
 
 ### Install VSCode
 
-- To install the open source version: `pacman -S code`
+> Written on June 14th, 2024
+
+- To install the open source version: `sudo pacman -S code`
 - To install the official version: `paru -S visual-studio-code-bin`
 
 ### Set Wallpaper with Nitrogen
+
+> Written on June 14th, 2024
 
 - Launch nitrogen
 - `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
@@ -185,3 +189,4 @@ zh_TW.UTF-8 UTF-8
 Once you have successfully set your wallpaper, your desktop should look like what's down below
 
 ![bspwm](/screenshots/bspwm.png)
+
