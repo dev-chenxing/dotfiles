@@ -10,7 +10,7 @@ The configuration files for my Arch Linux laptop. It also comes with a step-by-s
 
 ### How to Install Arch Linux
 
-> Written on May 21st, 2024
+> Written on June 14th, 2024
 
 ![Arch Linux Install](/screenshots/arch_linux_install.png)
 
@@ -88,7 +88,7 @@ chmod +x ./install-paru
 ./install-paru
 ```
 
-Run the `./bspwm-config` script
+Second, run the `./bspwm-config` script
 
 ```bash
 chmod +x ./bspwm-config
@@ -97,7 +97,7 @@ chmod +x ./bspwm-config
 
 This will create the configuration files for `bspwm`, `sxhkd`, `picom`, `polybar`, and `dunst`
 
-Now exit from chroot and our installation is completed.
+Finally, exit from chroot and our installation is completed.
 
 ```bash
 exit # logout from [username@archiso ~]$
@@ -115,22 +115,15 @@ If you follow the instructions above, right now you should be greeted by the def
 
 ![sddm](/screenshots/sddm.png)
 
-Once you have successfully logged in to your user account, your desktop should look like what's below
-
-![bspwm](/screenshots/bspwm.png)
-
-`Win + Enter` to bring up the terminal.
-
 ### How to Setup Chinese Input Method
 
-> Written on May 23rd, 2024
+> Written on June 14th, 2024
 
 We are going to use `fcitx5` for our input method and `Noto Sans Mono CJK` for our font
 
 ```bash
 sudo pacman -Sy fcitx5-im
 sudo pacman -Sy fcitx5-chinese-addons
-sudo pacman -S noto-fonts-cjk
 ```
 
 Set the IM modules environment variables and reboot
@@ -147,11 +140,11 @@ XMODIFIERS=@im=fcitx
 
 ![etc_environment](/screenshots/etc_environment.png)
 
-`Win + D` to launch Rofi and run the _Fcitx 5 Configuration_. Click on the `Run Fcitx 5` button.
+`Win + D` to launch Rofi and run the _Fcitx 5 Configuration_. 
 
-On the right panel, search input method `Pinyin` and double click on it to set it as Current Input Method.
+On the right panel, search for input method `Pinyin` , double click on it to set it as Current Input Method.
 
-Then go to the `Global Options` section, remove the `Enumerate Input Method Group Forward/Backward` keybinds and change the `Trigger Input Method` keybind to `Super+Space`.
+Then go to the `Global Options` section, remove the `Enumerate Input Method Group Forward/Backward` keybinds and change the `Trigger Input Method` keybind from `Control+Space` to `Super+Space`.
 
 Apply the changes and go back to the `Input Method` section. Select `Pinyin` and click on the `Configure` button.
 
@@ -164,25 +157,10 @@ Apply the changes and go back to the `Input Method` section. Select `Pinyin` and
 
 ![fcitx5](/screenshots/fcitx5.png)
 
-One last step to set is to add fcitx5 to the list of auto start applications
+One last step to set is to edit the locale file
 
 ```bash
-nano .config/bspwm/bspwmrc
-```
-
-```
-# auto start applications
-nitrogen --restore &
-polybar &
-picom --config $HOME/.config/picom/picom.conf &
-dunst &
-fcitx5 -d &
-```
-
-We also need to edit the locale file
-
-```bash
-sudo nano /etc/locale.gen`
+sudo nano /etc/locale.gen
 ```
 
 Uncomment lines:
@@ -203,3 +181,7 @@ zh_TW.UTF-8 UTF-8
 - Launch nitrogen
 - `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
 - Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
+
+Once you have successfully set your wallpaper, your desktop should look like what's down below
+
+![bspwm](/screenshots/bspwm.png)
