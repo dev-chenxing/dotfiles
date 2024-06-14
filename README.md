@@ -57,7 +57,7 @@ archinstall
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 -   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
+-   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git fcitx5`
 -   Then, `Copy ISO network configuration to installation`.
 -   Set your timezone.
 -   Enable `multilib` as an optional additional repositories.
@@ -115,6 +115,23 @@ If you follow the instructions above, right now you should be greeted by the def
 
 ![sddm](/screenshots/sddm.png)
 
+### Set Wallpaper with Nitrogen
+
+-   Launch nitrogen
+-   `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
+-   Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
+
+Once you have successfully set your wallpaper, your desktop should look like what's down below
+
+![bspwm](/screenshots/bspwm.png)
+
+### Install VSCode
+
+-   To install the open source version: `pacman -S code`
+-   To install the official version: `paru -S visual-studio-code-bin`
+
+Thes two versions conflict with each other. Choose one.
+
 ### How to Setup Chinese Input Method
 
 > Written on June 14th, 2024
@@ -140,7 +157,7 @@ XMODIFIERS=@im=fcitx
 
 ![etc_environment](/screenshots/etc_environment.png)
 
-`Win + D` to launch Rofi and run the _Fcitx 5 Configuration_. 
+`Win + D` to launch Rofi and run the _Fcitx 5 Configuration_.
 
 On the right panel, search for input method `Pinyin` , double click on it to set it as Current Input Method.
 
@@ -170,18 +187,3 @@ zh_CN.UTF-8 UTF-8
 zh_HK.UTF-8 UTF-8
 zh_TW.UTF-8 UTF-8
 ```
-
-### Install VSCode
-
-- To install the open source version: `pacman -S code`
-- To install the official version: `paru -S visual-studio-code-bin`
-
-### Set Wallpaper with Nitrogen
-
-- Launch nitrogen
-- `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
-- Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
-
-Once you have successfully set your wallpaper, your desktop should look like what's down below
-
-![bspwm](/screenshots/bspwm.png)
