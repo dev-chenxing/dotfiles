@@ -125,15 +125,6 @@ Once you have successfully set your wallpaper, your desktop should look like wha
 
 ![bspwm](/screenshots/bspwm.png)
 
-### Install VSCode
-
-> Written on June 14th, 2024
-
-- To install the open source version: `sudo pacman -S code`
-- To install the official version: `paru -S visual-studio-code-bin`
-
-Thes two versions conflict with each other. Choose one.
-
 ### How to Setup Chinese Input Method
 
 > Written on June 14th, 2024
@@ -221,4 +212,15 @@ To configure `neofetch`,
 
 ```bash
 cp -r neofetch $HOME/.config
+```
+
+### VSCode Setup
+
+> Written on June 15th, 2024
+
+To configure `Code - OSS`,
+
+```bash
+cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
+cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 ```
