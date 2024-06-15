@@ -48,19 +48,19 @@ archinstall
 
 ![archinstall](/screenshots/archinstall.png)
 
--   Set your Mirror Region to where you are.
--   Keep the Locales as it (us, en_US, UTF-8).
--   Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
--   Leave the Disk encryption as empty.
--   Use `Grub` for the bootloader.
--   Specify your Hostname: `arch`
--   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
--   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
--   Choose `Pulseaudio` for audio server.
--   Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
--   Then, `Copy ISO network configuration to installation`.
--   Set your timezone.
--   Enable `multilib` as an optional additional repositories.
+- Set your Mirror Region to where you are.
+- Keep the Locales as it (us, en_US, UTF-8).
+- Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
+- Leave the Disk encryption as empty.
+- Use `Grub` for the bootloader.
+- Specify your Hostname: `arch`
+- Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
+- For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
+- Choose `Pulseaudio` for audio server.
+- Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
+- Then, `Copy ISO network configuration to installation`.
+- Set your timezone.
+- Enable `multilib` as an optional additional repositories.
 
 And we are good to go!
 
@@ -117,9 +117,9 @@ If you follow the instructions above, right now you should be greeted by the def
 
 ### Set Wallpaper with Nitrogen
 
--   Launch nitrogen
--   `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
--   Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
+- Launch nitrogen
+- `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
+- Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
 
 Once you have successfully set your wallpaper, your desktop should look like what's down below
 
@@ -129,8 +129,8 @@ Once you have successfully set your wallpaper, your desktop should look like wha
 
 > Written on June 14th, 2024
 
--   To install the open source version: `sudo pacman -S code`
--   To install the official version: `paru -S visual-studio-code-bin`
+- To install the open source version: `sudo pacman -S code`
+- To install the official version: `paru -S visual-studio-code-bin`
 
 Thes two versions conflict with each other. Choose one.
 
@@ -151,7 +151,7 @@ Set the IM modules environment variables and reboot
 sudo nano /etc/environment
 ```
 
-```
+```text
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
@@ -167,12 +167,12 @@ Then go to the `Global Options` section, remove the `Enumerate Input Method Grou
 
 Apply the changes and go back to the `Input Method` section. Select `Pinyin` and click on the `Configure` button.
 
--   Enable Cloud Pinyin
--   Configure Cloud Pinyin:
-    -   Minimum Pinyin Length: 2
-    -   Backend: Baidu
--   Previous Candidate: Left
--   Next Candidate: Right
+- Enable Cloud Pinyin
+- Configure Cloud Pinyin:
+  - Minimum Pinyin Length: 2
+  - Backend: Baidu
+- Previous Candidate: Left
+- Next Candidate: Right
 
 ![fcitx5](/screenshots/fcitx5.png)
 
@@ -184,14 +184,30 @@ sudo nano /etc/locale.gen
 
 Uncomment lines:
 
-```
+```text
 zh_CN.UTF-8 UTF-8
 zh_HK.UTF-8 UTF-8
 zh_TW.UTF-8 UTF-8
 ```
 
-### Neofetch Configuration and Customization
+### Neofetch/Hyfetch Configuration and Customization
 
 > Written on June 15th, 2024
 
 ![hyfetch](screenshots/hyfetch.png)
+
+To run `Hyfetch`, the modern `Neofetch` every time you launch the terminal, simply add `hyfetch` to your `.bashrc` file
+
+```bash
+nano $HOME/.bashrc
+```
+
+```bash
+hyfetch
+```
+
+To configure `neofetch`,
+
+```bash
+cp -r neofetch $HOME/.config
+```
