@@ -190,6 +190,17 @@ zh_HK.UTF-8 UTF-8
 zh_TW.UTF-8 UTF-8
 ```
 
+### Synth-Shell for Fancy Bash Prompt
+
+> Written on June 15th, 2024
+
+To install and setup `synth-shell`, simply run the `./install-synth-shell` script
+
+```bash
+chmod +x ./install-synth-shell
+./install-synth-shell
+```
+
 ### Neofetch/Hyfetch Configuration and Customization
 
 > Written on June 15th, 2024
