@@ -28,7 +28,7 @@ super + x
 
 # screenshot
 Print
-  scrot '%F_%H-%M-%S.png' -e 'mv $f ~/Pictures/screenshot/' && notify-send 'Screenshot captured'
+  scrot %F_%H-%M-%S.png -e 'mv $f ~/Pictures/screenshot/' && notify-send 'Screenshot captured'
 
 # Increase volume
 XF86AudioRaiseVolume

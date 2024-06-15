@@ -1,0 +1,23 @@
+! URxvt Basic Settings
+URxvt*scrollBar: false
+URxvt.internalBorder: 10
+
+URxvt*.transparent: true
+URxvt*.shading: 10
+URxvt.background: #262626
+URxvt.foreground: #ffffff
+URxvt.cursorColor:  #ffffff
+URxvt.pointerColor: #dc74d1
+URxvt.xftAntialias: true
+
+URxvt.font: xft:monospace:pixelsize=12:antialiasing=true, xft:Noto Sans:pixelsize=12, xft:Noto Sans Symbols 2:pixelsize=12, xft:Noto Sans Mono CJK JP:pixelsize=12, xft:Symbola:pixelsize=12, xft:PowerlineSymbols:pixelsize=12
+
+URxvt.saveLines: 200000
+
+URxvt.keysym.Control-minus:    font-size:decrease
+URxvt.keysym.Control-equal:    font-size:increase
+
+URxvt.urlLauncher: firefox
+
+URxvt.utf8: true
+URxvt.locale: true
