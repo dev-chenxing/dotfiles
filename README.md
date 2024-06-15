@@ -2,9 +2,18 @@
 
 The configuration files for my Arch Linux laptop. It also comes with a step-by-step guide to install and configure Arch Linux.
 
-## Screenshots
+### Preview
 
 ![preview](/screenshots/preview.png)
+
+### Application list
+
+| Usage   | Application      |
+| ------- | ---------------- |
+| Editor  | Code - OSS       |
+| Shell   | bash             |
+| Termial | alacritty, urxvt |
+| Desktop | bspwm            |
 
 ## Guides
 
@@ -48,19 +57,19 @@ archinstall
 
 ![archinstall](/screenshots/archinstall.png)
 
-- Set your Mirror Region to where you are.
-- Keep the Locales as it (us, en_US, UTF-8).
-- Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
-- Leave the Disk encryption as empty.
-- Use `Grub` for the bootloader.
-- Specify your Hostname: `arch`
-- Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
-- For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
-- Choose `Pulseaudio` for audio server.
-- Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen thunar git code fcitx5`
-- Then, `Copy ISO network configuration to installation`.
-- Set your timezone.
-- Enable `multilib` as an optional additional repositories.
+-   Set your Mirror Region to where you are.
+-   Keep the Locales as it (us, en_US, UTF-8).
+-   Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
+-   Leave the Disk encryption as empty.
+-   Use `Grub` for the bootloader.
+-   Specify your Hostname: `arch`
+-   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
+-   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
+-   Choose `Pulseaudio` for audio server.
+-   Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen thunar git code fcitx5`
+-   Then, `Copy ISO network configuration to installation`.
+-   Set your timezone.
+-   Enable `multilib` as an optional additional repositories.
 
 And we are good to go!
 
@@ -115,9 +124,9 @@ If you follow the instructions above, right now you should be greeted by the def
 
 ### Set Wallpaper with Nitrogen
 
-- Launch nitrogen
-- `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
-- Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
+-   Launch nitrogen
+-   `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
+-   Click on the wallpaper, `Scaled` and `Screen 1`, `OK`
 
 Once you have successfully set your wallpaper, your desktop should look like what's down below
 
@@ -156,12 +165,12 @@ Then go to the `Global Options` section, remove the `Enumerate Input Method Grou
 
 Apply the changes and go back to the `Input Method` section. Select `Pinyin` and click on the `Configure` button.
 
-- Enable Cloud Pinyin
-- Configure Cloud Pinyin:
-  - Minimum Pinyin Length: 2
-  - Backend: Baidu
-- Previous Candidate: Left
-- Next Candidate: Right
+-   Enable Cloud Pinyin
+-   Configure Cloud Pinyin:
+    -   Minimum Pinyin Length: 2
+    -   Backend: Baidu
+-   Previous Candidate: Left
+-   Next Candidate: Right
 
 ![fcitx5](/screenshots/fcitx5.png)
 
@@ -197,9 +206,9 @@ sh ./install-synth-shell.sh
 
 When you first run `hyfetch`, it will prompt you to configure. My setup is:
 
-- color: akiosexual
-- brightness: 50%
-- arrangement: horizontal
+-   color: akiosexual
+-   brightness: 50%
+-   arrangement: horizontal
 
 To run `Hyfetch`, the modern `Neofetch` every time you launch the terminal, simply add `hyfetch` to your `.bashrc` file
 
@@ -223,7 +232,7 @@ cp -r neofetch $HOME/.config
 
 Extensions to install:
 
-- Prettier - Code formatter
+-   Prettier - Code formatter
 
 To configure `Code - OSS`,
 
