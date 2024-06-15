@@ -251,3 +251,11 @@ To configure `Rofi`,
 ```bash
 cp -r rofi $HOME/.config
 ```
+
+### Set up Slock
+
+> Written on June 15th, 2024
+
+```bash
+git clone https://git.suckless.org/slock $HOME/slock
+```
