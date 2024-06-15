@@ -4,7 +4,7 @@ The configuration files for my Arch Linux laptop. It also comes with a step-by-s
 
 ## Screenshots
 
-![image](/screenshots/screenshot.png)
+![preview](/screenshots/preview.png)
 
 ## Guides
 
@@ -80,17 +80,17 @@ Then, clone this repository to `$HOME`
 git clone https://github.com/dev-chenxing/dotfiles.git
 ```
 
-First, run the `install-paru` script to install [paru](https://aur.archlinux.org/packages/paru), the AUR helper
+First, run the `install-paru.sh` script to install [paru](https://aur.archlinux.org/packages/paru), the AUR helper
 
 ```bash
 cd dotfiles
-./install-paru
+sh ./install-paru.sh
 ```
 
-Second, run the `./bspwm-config` script
+Second, run the `./bspwm-config.sh` script
 
 ```bash
-./bspwm-config
+sh ./bspwm-config.sh
 ```
 
 This will create the configuration files for `bspwm`, `sxhkd`, `picom`, `polybar`, and `dunst`
@@ -183,10 +183,10 @@ zh_TW.UTF-8 UTF-8
 
 > Written on June 15th, 2024
 
-To install and setup `synth-shell`, simply run the `./install-synth-shell` script
+To install and setup `synth-shell`, simply run the `./install-synth-shell.sh` script
 
 ```bash
-./install-synth-shell
+sh ./install-synth-shell.sh
 ```
 
 ### Neofetch/Hyfetch Configuration and Customization
@@ -239,7 +239,7 @@ cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 Install the modified version of `Where is my SDDM theme?`
 
 ```bash
-./install-sddm-theme
+sh ./install-sddm-theme.sh
 ```
 
 ### Setup and Configure Rofi
@@ -259,7 +259,7 @@ cp -r rofi $HOME/.config
 To install and configure `slock`
 
 ```bash
-./install-slock
+sh ./install-slock.sh
 ```
 
 ### Scrot and Dunst Notifications
