@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 mkdir $HOME/.config/{bspwm,sxhkd,polybar,picom,dunst}
 cp -r bspwm $HOME/.config
 chmod +x $HOME/.config/bspwm/bspwmrc
