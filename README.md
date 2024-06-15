@@ -256,6 +256,8 @@ cp -r rofi $HOME/.config
 
 > Written on June 15th, 2024
 
+To install and configure `slock`
+
 ```bash
-git clone https://git.suckless.org/slock $HOME/slock
+./install-slock
 ```
