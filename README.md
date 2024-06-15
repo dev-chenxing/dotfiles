@@ -189,3 +189,9 @@ zh_CN.UTF-8 UTF-8
 zh_HK.UTF-8 UTF-8
 zh_TW.UTF-8 UTF-8
 ```
+
+### Neofetch Configuration and Customization
+
+> Written on June 15th, 2024
+
+![hyfetch](screenshots/hyfetch.png)
