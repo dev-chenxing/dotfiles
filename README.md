@@ -17,6 +17,22 @@ The configuration files for my Arch Linux laptop. It also comes with a step-by-s
 
 ## Guides
 
+<!-- TOC -->
+
+- [How to Install Arch Linux](#how-to-install-arch-linux)
+- [Set Wallpaper with Nitrogen](#set-wallpaper-with-nitrogen)
+- [How to Setup Chinese Input Method](#how-to-setup-chinese-input-method)
+- [Synth-Shell for Fancy Bash Prompt](#synth-shell-for-fancy-bash-prompt)
+- [Neofetch/Hyfetch Configuration and Customization](#neofetchhyfetch-configuration-and-customization)
+- [VSCode Setup](#vscode-setup)
+- [SDDM Login Manager](#sddm-login-manager)
+- [Setup and Configure Rofi](#setup-and-configure-rofi)
+- [Set up Slock](#set-up-slock)
+- [Scrot and Dunst Notifications](#scrot-and-dunst-notifications)
+- [URxvt Configuration](#urxvt-configuration)
+
+<!-- /TOC -->
+
 ### How to Install Arch Linux
 
 > Written on June 14th, 2024
@@ -83,9 +99,10 @@ Now we need to do the basic configuration for bspwm, or else you will be getting
 su - <"username"> # login into your user
 ```
 
-Then, clone this repository to `$HOME`
+Then, clone the dotfiles to `$HOME`
 
 ```bash
+cd $HOME
 git clone https://github.com/dev-chenxing/dotfiles.git
 ```
 
