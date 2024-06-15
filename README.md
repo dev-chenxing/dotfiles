@@ -224,3 +224,15 @@ To configure `Code - OSS`,
 cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 ```
+
+### SDDM Login Manager
+
+> Written on June 15th, 2024
+
+Install the modified version of `Where is my SDDM theme?`
+
+```bash
+paru -S where-is-my-sddm-theme-git
+sudo cp sddm/sddm.conf /etc
+sudo cp -r sddm/where_is_my_sddm_theme /usr/share/sddm/themes
+```
