@@ -57,7 +57,7 @@ archinstall
 - Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 - For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 - Choose `Pulseaudio` for audio server.
-- Additional packages to install: `firefox neofetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
+- Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
 - Then, `Copy ISO network configuration to installation`.
 - Set your timezone.
 - Enable `multilib` as an optional additional repositories.
@@ -84,14 +84,12 @@ First, run the `install-paru` script to install [paru](https://aur.archlinux.org
 
 ```bash
 cd dotfiles
-chmod +x ./install-paru
 ./install-paru
 ```
 
 Second, run the `./bspwm-config` script
 
 ```bash
-chmod +x ./bspwm-config
 ./bspwm-config
 ```
 
@@ -188,7 +186,6 @@ zh_TW.UTF-8 UTF-8
 To install and setup `synth-shell`, simply run the `./install-synth-shell` script
 
 ```bash
-chmod +x ./install-synth-shell
 ./install-synth-shell
 ```
 
@@ -197,6 +194,12 @@ chmod +x ./install-synth-shell
 > Written on June 15th, 2024
 
 ![hyfetch](screenshots/hyfetch.png)
+
+When you first run `hyfetch`, it will prompt you to configure. My setup is:
+
+- color: akiosexual
+- brightness: 50%
+- arrangement: horizontal
 
 To run `Hyfetch`, the modern `Neofetch` every time you launch the terminal, simply add `hyfetch` to your `.bashrc` file
 
@@ -218,10 +221,14 @@ cp -r neofetch $HOME/.config
 
 > Written on June 15th, 2024
 
+Extensions to install:
+
+- Prettier - Code formatter
+
 To configure `Code - OSS`,
 
-```bash
-cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
+```bashs
+cp Code\ -\ OSS/User/settings.json $HOME/.config/Code\ -\ OSS/User
 cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 ```
 
@@ -232,7 +239,6 @@ cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 Install the modified version of `Where is my SDDM theme?`
 
 ```bash
-chmod +x ./install-sddm-theme
 ./install-sddm-theme
 ```
 
