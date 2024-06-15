@@ -57,7 +57,7 @@ archinstall
 - Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
 - For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
 - Choose `Pulseaudio` for audio server.
-- Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen lf thunar git code fcitx5`
+- Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen thunar git code fcitx5`
 - Then, `Copy ISO network configuration to installation`.
 - Set your timezone.
 - Enable `multilib` as an optional additional repositories.
@@ -260,4 +260,33 @@ To install and configure `slock`
 
 ```bash
 ./install-slock
+```
+
+### Scrot and Dunst Notifications
+
+> Written on June 15th, 2024
+
+I store my screenshots in `$HOME/Pictures/screenshot`
+
+```bash
+mkdir $HOME/Pictures
+mkdir $HOME/Pictures/screenshot
+```
+
+To install `scrot`, the screenshot software
+
+```bash
+sudo pacman -S scrot
+```
+
+To take a screenshot, simply press the `PrtSc` key
+
+### URxvt Configuration
+
+> Written on June 15th, 2024
+
+To configure `urxvt`
+
+```bash
+cp urxvt/.Xdefaults $HOME
 ```
