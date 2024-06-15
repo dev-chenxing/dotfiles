@@ -232,7 +232,16 @@ cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
 Install the modified version of `Where is my SDDM theme?`
 
 ```bash
-paru -S where-is-my-sddm-theme-git
-sudo cp sddm/sddm.conf /etc
-sudo cp -r sddm/where_is_my_sddm_theme /usr/share/sddm/themes
+chmod +x ./install-sddm-theme
+./install-sddm-theme
+```
+
+### Setup and Configure Rofi
+
+> Written on June 15th, 2024
+
+To configure `Rofi`,
+
+```bash
+cp -r rofi $HOME/.config
 ```
