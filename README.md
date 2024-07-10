@@ -1,6 +1,12 @@
-# 🗃️ dotfiles
+# 🗃️ 更换电脑前的准备工作
 
 Windows setup for office work.
+
+### 退出账号
+
+#### 退出GitHub
+
+Windows 搜索**凭据管理器**，在**普通凭据**一栏中找到`github`的凭据并删除，
 
 ### Application list
 
