@@ -20,7 +20,6 @@ Windows 搜索**凭据管理器**，在**普通凭据**一栏中找到`github`�
 | node          | https://nodejs.org/en                          |
 | python        | https://www.python.org/downloads/windows/      |
 | RubyInstaller | https://rubyinstaller.cn/                      |
-| sqlite        | https://www.sqlite.org/download.html           |
-| SumatraPDF    | https://www.sumatrapdfreader.org/downloadafter |
+| gh            | https://cli.github.com/                        |
 | WeChat        | https://pc.weixin.qq.com/?lang=en_US           |
 | WPS           | https://www.kdocs.cn/latest                    |
