@@ -44,45 +44,88 @@ pacman -S archinstall
 archinstall
 ```
 
-And if the download speed is way too slow, edit `/etc/pacman.d/mirrorlist` to add mirrors in your geographic region. 
-
-```
-## China
-Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-Server = http://mirrors.nju.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.xjtu.edu.cn/archlinux/$repo/os/$arch
-```
-
 ![archinstall](/screenshots/archinstall.png)
 
--   Set your Mirror Region to where you are.
 -   Keep the Locales as it (us, en_US, UTF-8).
+-   Mirrors and repositories:
+    -   Set your Mirror Region to where you are.
+    -   Optional repositories: multilib
 -   Select `Use a best-effort default partition layout` for partitioning, and select the hard drive to use. Select `ext4` for filesystem.
 -   Leave the Disk encryption as empty.
 -   Bootloader to use: `Grub`
--   Specify your Hostname: `very-powerful-pc`
--   Add your user account `shrek` (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
--   For Profile, set `type` to `Desktop`, and select `Hyperland` as our desktop environment, and choose `sddm` as our Greeter.
+-   Set Root password
+-   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
+-   For Profile, set `type` to `Desktop`, and select `Awesome` as our desktop environment, and choose `ly` as the Greeter.
 -  Choose `Pipewire` for audio server.
--  Kernels: `linux` kernel
--  Then, `Use NetworkManager`
+-  Netword configuration: `Use NetworkManager`
 -  Set your timezone.
 
 And we are good to go!
 
 **INSTALL!**
 
-Then, select `yes` when asked whether to chroot into the installation.
-
-
+Then, select `no` when asked whether to chroot into the installation.
 
 **REBOOT** and `Boot existing OS` this time.
 
-If you follow the instructions above, right now you should be greeted by the default `sddm` display manager.
+If you follow the instructions above, right now you should be greeted by the default `ly` display manager.
 
-![sddm](/screenshots/sddm.png)
+![ly](/screenshots/ly.png)
 
-### Set Wallpaper with Nitrogen
+After you successfully logged in, this is what default Awesome looks like.
+
+![awesome](/screenshots/awesome.png)
+
+### Switch to Ly from other display managers
+
+```bash
+sudo pacman -S ly
+rm /etc/systemd/system/display-manager.service
+systemctl enable ly.service -- Enable the service
+```
+
+### Default Awesome Keybindings
+
+| keybind       | description      |
+| ------------- | ---------------- |
+| Super+S       | show help        |
+| Super+Shift+C | close window     |
+| Super+Enter   | open a terminal  |
+| Super+P       | show the menubar |
+| Super+R       | run prompt       |
+| Super+Ctrl+R | reload awesome   |
+
+### Change the Awesome Default Config
+
+Create the directory, copy and edit the template file:
+
+```bash
+mkdir -p ~/.config/awesome/
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/
+code ~/.config/awesome/
+```
+
+#### Change the default terminal to WezTerm
+
+Install WezTerm
+
+```bash
+sudo pacman -S wezterm
+```
+
+```lua
+-- ~/.config/awesome/rc.lua
+terminal = "wezterm"
+```
+
+#### Change the Keybindings
+
+```lua
+-- ~/.config/awesome/rc.lua
+
+```
+
+### Set Wallpaper
 
 -   Launch nitrogen
 -   `Preferences` -> `Add` to add `dotfiles/wallpapers` to Directory. `OK`
