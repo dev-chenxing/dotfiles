@@ -1,5 +1,11 @@
 # 🗃️ dotfiles
 
+> [!WARNING]
+> I no longer use or maintain these dotfiles.
+> This repository is kept for archive use only.
+> My current dotfiles are here: [chenxing-dev/dotfiles](https://github.com/chenxing-dev/dotfiles).
+> They are still for Arch Linux, but now use Niri/Qtile instead of bspwm.
+
 The configuration files for my Arch Linux laptop. It also comes with a step-by-step guide to install and configure Arch Linux.
 
 ### Preview
