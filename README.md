@@ -25,17 +25,20 @@ The configuration files for my Arch Linux laptop. It also comes with a step-by-s
 
 <!-- TOC -->
 
-- [How to Install Arch Linux](#how-to-install-arch-linux)
-- [Set Wallpaper with Nitrogen](#set-wallpaper-with-nitrogen)
-- [How to Setup Chinese Input Method](#how-to-setup-chinese-input-method)
-- [Synth-Shell for Fancy Bash Prompt](#synth-shell-for-fancy-bash-prompt)
-- [Neofetch/Hyfetch Configuration and Customization](#neofetchhyfetch-configuration-and-customization)
-- [VSCode Setup](#vscode-setup)
-- [SDDM Login Manager](#sddm-login-manager)
-- [Setup and Configure Rofi](#setup-and-configure-rofi)
-- [Set up Slock](#set-up-slock)
-- [Scrot and Dunst Notifications](#scrot-and-dunst-notifications)
-- [URxvt Configuration](#urxvt-configuration)
+- [🗃️ dotfiles](#️-dotfiles)
+    - [Preview](#preview)
+    - [Application list](#application-list)
+  - [Guides](#guides)
+    - [How to Install Arch Linux](#how-to-install-arch-linux)
+    - [Set Wallpaper with Nitrogen](#set-wallpaper-with-nitrogen)
+    - [How to Setup Chinese Input Method](#how-to-setup-chinese-input-method)
+    - [Synth-Shell for Fancy Bash Prompt](#synth-shell-for-fancy-bash-prompt)
+    - [Neofetch/Hyfetch Configuration and Customization](#neofetchhyfetch-configuration-and-customization)
+    - [VSCode Setup](#vscode-setup)
+    - [Setup and Configure Rofi](#setup-and-configure-rofi)
+    - [Set up Slock](#set-up-slock)
+    - [Scrot and Dunst Notifications](#scrot-and-dunst-notifications)
+    - [URxvt Configuration](#urxvt-configuration)
 
 <!-- /TOC -->
 
@@ -86,7 +89,7 @@ archinstall
 -   Use `Grub` for the bootloader.
 -   Specify your Hostname: `arch`
 -   Add your user account (Remember you **password**!), and `yes`, it should be a superuser. Confirm and exit.
--   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `sddm` as our Greeter.
+-   For Profile, set `type` to `Desktop`, and select `Bspwm` as our desktop environment, and choose `ly` as our Greeter.
 -   Choose `Pulseaudio` for audio server.
 -   Additional packages to install: `firefox hyfetch sxhkd polybar picom rofi dunst nitrogen thunar git code fcitx5`
 -   Then, `Copy ISO network configuration to installation`.
@@ -141,9 +144,7 @@ exit # exit from [root@archiso /]#
 reboot
 ```
 
-If you follow the instructions above, right now you should be greeted by the default `sddm` display manager.
-
-![sddm](/screenshots/sddm.png)
+If you follow the instructions above, right now you should be greeted by the default `ly` display manager.
 
 ### Set Wallpaper with Nitrogen
 
@@ -262,16 +263,6 @@ To configure `Code - OSS`,
 ```bashs
 cp Code\ -\ OSS/User/settings.json $HOME/.config/Code\ -\ OSS/User
 cp Code\ -\ OSS/User/keybindings.json $HOME/.config/Code\ -\ OSS/User
-```
-
-### SDDM Login Manager
-
-> Written on June 15th, 2024
-
-Install the modified version of `Where is my SDDM theme?`
-
-```bash
-sh ./install-sddm-theme.sh
 ```
 
 ### Setup and Configure Rofi
